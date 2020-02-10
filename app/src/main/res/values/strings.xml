@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">News feed</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="country_names_array">
+        <item>Ukraine</item>
+        <item>Russia</item>
+        <item>United States</item>
+    </string-array>
+
+    <string-array name="country_values_array">
+        <item>ua</item>
+        <item>ru</item>
+        <item>us</item>
+    </string-array>
+</resources>
