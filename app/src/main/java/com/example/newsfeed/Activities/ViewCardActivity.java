@@ -18,6 +18,7 @@ public class ViewCardActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_toolbar, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -32,6 +33,7 @@ public class ViewCardActivity extends AppCompatActivity {
 
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
