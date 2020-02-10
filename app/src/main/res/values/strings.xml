@@ -1,4 +1,7 @@
 <resources>
+    <string name="api_link_base">https://newsapi.org/v2/top-headlines?country=</string>
+    <string name="api_key">&amp;apiKey=99a0a3c0fa004f8d8688f1b4b8538274</string>
+
     <string name="app_name">News feed</string>
     <string name="action_settings">Settings</string>
     <string-array name="country_names_array">
