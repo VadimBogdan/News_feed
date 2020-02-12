@@ -16,7 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class ImageDownloader {
-    private static LruCache<String, Bitmap> memoryCache;
+    private LruCache<String, Bitmap> memoryCache;
 
     public ImageDownloader() {
         // Get max available VM memory, exceeding this amount will throw an
@@ -37,17 +37,17 @@ public class ImageDownloader {
         };
     }
 
-    private static void addBitmapToMemoryCache(String key, Bitmap bitmap) {
+    private void addBitmapToMemoryCache(String key, Bitmap bitmap) {
         if (getBitmapFromMemCache(key) == null) {
             memoryCache.put(key, bitmap);
         }
     }
 
-    private static Bitmap getBitmapFromMemCache(String key) {
+    private Bitmap getBitmapFromMemCache(String key) {
         return memoryCache.get(key);
     }
 
-    private static boolean isInCache(String url, ImageView imageView) {
+    private boolean isInCache(String url, ImageView imageView) {
         Bitmap bitmap = getBitmapFromMemCache(url);
         if (bitmap == null) {
             return false;
@@ -57,7 +57,7 @@ public class ImageDownloader {
         return true;
     }
 
-    private static BitmapDownloaderTask getBitmapDownloaderTask(ImageView imageView) {
+    private BitmapDownloaderTask getBitmapDownloaderTask(ImageView imageView) {
         if (imageView != null) {
             Drawable drawable = imageView.getDrawable();
             if (drawable instanceof DownloadedDrawable) {
@@ -108,7 +108,7 @@ public class ImageDownloader {
         }
     }
 
-    static class BitmapDownloaderTask extends AsyncTask<String, Void, Bitmap> {
+     class BitmapDownloaderTask extends AsyncTask<String, Void, Bitmap> {
         String url;
         private WeakReference<ImageView> imageView;
 

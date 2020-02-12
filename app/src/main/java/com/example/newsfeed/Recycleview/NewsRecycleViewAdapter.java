@@ -58,7 +58,6 @@ public class NewsRecycleViewAdapter extends RecyclerView.Adapter<NewsItemViewHol
         Article article = articles.get(articleIndex);
         String urlToImg = articles.get(articleIndex).get(Article.TAG_URL_TO_IMAGE);
         holder.setArticle(article);
-        holder.getArticleTitleView().setText(article.get(Article.TAG_TITLE));
 
         if (!urlToImg.equals("null")) {
             imageDownloader.download(urlToImg, holder.getArticleImageView());

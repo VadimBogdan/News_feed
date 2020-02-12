@@ -37,5 +37,7 @@ public class NewsItemViewHolder extends RecyclerView.ViewHolder {
 
     public void setArticle(Article article) {
         this.article = article;
+
+        titleArticleView.setText(article.get(Article.TAG_TITLE));
     }
 }
